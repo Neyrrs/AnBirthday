@@ -1,0 +1,130 @@
+import React from "react";
+import flower from "../../assets/flower.png";
+import flower2 from "../../assets/flower2.png";
+import flower3 from "../../assets/flower3.png";
+import letter from "../../assets/letter.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register plugins
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
+const EndingPage = () => {
+  useGSAP(() => {
+    // TEXT SPLIT + SCROLL TRIGGER
+    const split = new SplitText(".text", {
+      type: "chars",
+    });
+
+    gsap.fromTo(
+      split.chars,
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: ".text",
+          start: "top 80%", // ketika .text masuk 80% dari viewport
+          end: "bottom 60%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.to("#rose", {
+      duration: 2,
+      yoyo: true,
+      ease: "sine.inOut",
+      rotate: 10,
+      repeat: -1,
+    });
+
+    gsap.to("#rose2", {
+      duration: 4,
+      yoyo: true,
+      ease: "sine.inOut",
+      rotate: -5,
+      repeat: -1,
+    });
+
+    gsap.from("#letter", {
+      opacity: 0,
+      y: 50,
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#letter",
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
+
+  return (
+    <>
+      <div className="relative h-screen w-screen landing overflow-y-hidden">
+        <div
+          className="w-fit h-fit absolute -right-8 top-[55%] justify-center flex items-center"
+          id="rose2"
+        >
+          <img
+            src={flower2}
+            className="object-cover object-center w-40 h-40 transform scale-x-[-1]"
+          />
+        </div>
+        <div className="w-fit h-fit absolute -left-8 top-[75%] justify-center flex items-center">
+          <img src={flower2} className="object-cover object-center w-40 h-40" />
+        </div>
+        <div className="w-fit h-fit absolute -left-5 top-[70%] justify-center flex items-center">
+          <img src={flower2} className="object-cover object-center w-40 h-40" />
+        </div>
+        <div
+          className="w-fit h-fit absolute -left-5 top-[50%] justify-center flex items-center"
+          id="rose"
+        >
+          <img src={flower} className="object-cover object-center w-20 h-20" />
+        </div>
+        <div className="w-fit h-fit absolute -right-6 bottom-5 - rotate-12 justify-center flex items-center">
+          <img
+            src={flower3}
+            className="object-cover object-center w-25 h-25 transform scale-x-[-1]"
+          />
+        </div>
+        <div className="w-fit h-fit absolute -right-5 bottom-10 -rotate-12 justify-center flex items-center">
+          <img
+            src={flower3}
+            className="object-cover object-center w-25 h-25 transform scale-x-[-1]"
+          />
+        </div>
+
+        <div className="h-full w-full flex flex-col justify-center items-center gap-5">
+          <div className="h-1/2 w-full p-5 text-white flex flex-col gap-5">
+            <h1 className="text text-2xl w-3/4 font-semibold">
+              So you've finish it? <span>Good job!!</span>
+            </h1>
+            <p className="text text-gray-400">Here, I got a message for you</p>
+          </div>
+          <div
+            className="w-full h-full right-0 mt-10 justify-center flex items-start"
+            id="letter"
+          >
+            <img
+              src={letter}
+              className="object-cover object-center w-35 h-35 rotate-20"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default EndingPage;
