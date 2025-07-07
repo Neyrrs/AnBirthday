@@ -1,8 +1,8 @@
 import React from "react";
-import flower from "../../assets/flower.png";
-import flower2 from "../../assets/flower2.png";
-import flower3 from "../../assets/flower3.png";
-import letter from "../../assets/letter.png";
+import flower from "../../assets/pictures/flower.png";
+import flower2 from "../../assets/pictures/flower2.png";
+import flower3 from "../../assets/pictures/flower3.png";
+import letter from "../../assets/pictures/letter.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
@@ -39,7 +39,7 @@ const EndingPage = () => {
     gsap.to("#rose", {
       duration: 2,
       yoyo: true,
-      ease: "sine.inOut",
+      ease: "steps(5)",
       rotate: 10,
       repeat: -1,
     });
@@ -47,7 +47,7 @@ const EndingPage = () => {
     gsap.to("#rose2", {
       duration: 4,
       yoyo: true,
-      ease: "sine.inOut",
+      ease: "steps(5)",
       rotate: -5,
       repeat: -1,
     });

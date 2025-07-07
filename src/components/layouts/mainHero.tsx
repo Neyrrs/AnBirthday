@@ -1,5 +1,5 @@
 import React from "react";
-import dummy from "../../assets/dumm.jpg";
+import dummy from "../../assets/pictures/dumm.jpg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const MainHero = () => {
+
   useGSAP(() => {
     const split = new SplitText(".title", { type: "chars" });
 
@@ -49,6 +50,7 @@ const MainHero = () => {
         },
       }
     );
+    
   }, []);
 
   return (
