@@ -7,13 +7,10 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// Register plugins
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const EndingPage = () => {
   useGSAP(() => {
-    // TEXT SPLIT + SCROLL TRIGGER
     const split = new SplitText(".text", {
       type: "chars",
     });
@@ -21,19 +18,19 @@ const EndingPage = () => {
     gsap.fromTo(
       split.chars,
       {
-        y: 20,
+        x: 40,
         opacity: 0,
       },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
         stagger: 0.05,
         scrollTrigger: {
-          trigger: ".text",
-          start: "top 80%", // ketika .text masuk 80% dari viewport
-          end: "bottom 60%",
+          trigger: ".ending-page-root",
+          start: "right 70%",
+          end: "right 40%",
           toggleActions: "play none none reverse",
         },
       }
@@ -55,22 +52,30 @@ const EndingPage = () => {
       repeat: -1,
     });
 
-    gsap.from("#letter", {
-      opacity: 0,
-      y: 50,
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#letter",
-        start: "top 90%",
-        toggleActions: "play none none reverse",
+    gsap.fromTo(
+      "#letter",
+      {
+        opacity: 0,
+        y: 10,
       },
-    });
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".ending-page-root",
+          start: "right 70%",
+          end: "right 40%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   }, []);
 
   return (
     <>
-      <div className="relative h-screen w-screen landing overflow-y-hidden">
+      <div className="relative h-screen w-screen landing overflow-y-hidden ending-page-root">
         <div
           className="w-fit h-fit absolute -right-8 top-[55%] justify-center flex items-center"
           id="rose2"

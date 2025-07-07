@@ -7,31 +7,31 @@ import EndingPage from "./endingPage";
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScrollSection = () => {
-  const sectionRef = useRef();
-  const containerRef = useRef();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const container = containerRef.current;
-      const section = sectionRef.current;
-      const totalSlides = container.children.length;
+      const totalSlides = container?.children.length || 0;
 
-      const scrollWidth = container.scrollWidth;
+      const scrollWidth = container?.scrollWidth || 0;
       const viewportWidth = window.innerWidth;
       const scrollDistance = scrollWidth - viewportWidth;
+
       gsap.to(containerRef.current, {
         x: () => `-${scrollDistance}px`,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: () => `+=${scrollDistance * 4}`,
+          end: () => `+=${scrollDistance}`,
           scrub: true,
           pin: true,
           anticipatePin: 1,
           snap: {
             snapTo: 1 / (totalSlides - 1),
-            duration:1,
+            duration: 1,
             ease: "power1.inOut",
           },
         },
@@ -44,7 +44,7 @@ const HorizontalScrollSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen w-screen overflow-hidden bg-gray-100"
+      className="relative h-screen w-screen overflow-hidden"
     >
       <div
         ref={containerRef}

@@ -4,13 +4,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// Daftarkan plugin
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const MainHero = () => {
   useGSAP(() => {
-    // Animasi teks judul
     const split = new SplitText(".title", { type: "chars" });
 
     gsap.fromTo(
@@ -33,7 +30,6 @@ const MainHero = () => {
       }
     );
 
-    // Animasi gambar masuk saat discroll
     gsap.fromTo(
       ".image-Container",
       {
@@ -56,18 +52,38 @@ const MainHero = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col justify-center items-center px-5 py-20">
-      <h1 className="title text-4xl font-bold text-center mb-10">Welcome to the Gallery</h1>
+    <div className="w-screen min-h-screen bg-white gap-10 flex flex-col px-5 py-2">
+      <div className="flex flex-col gap-2 ">
+        <h1 className="title text-xl font-bold text-left ">
+          Look at this pretty and cute girl
+        </h1>
+        <p className="title text-sm text-gray-600 w-2/3">
+          The beauty of you will never last while you got those cuteness &
+          prettyness
+        </p>
+      </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {Array.from({ length: 8 }).map((_, idx) => (
-          <img
-            src={dummy}
-            alt={`dummy-${idx}`}
-            key={idx}
-            className="image-Container w-full h-auto object-cover rounded-md shadow-lg"
-          />
-        ))}
+      <div className="grid grid-cols-2 grid-rows-3 gap-2 w-fit">
+        <img
+          src={dummy}
+          alt="1"
+          className="image-Container col-start-1 row-start-1 w-full h-full object-cover rounded-md shadow-lg"
+        />
+        <img
+          src={dummy}
+          alt="2"
+          className="image-Container col-start-1 row-start-2  h-full w-full object-cover rounded-md shadow-lg"
+        />
+        <img
+          src={dummy}
+          alt="3"
+          className="image-Container col-start-2 row-start-1 row-span-2 w-full h-full object-cover rounded-md shadow-lg"
+        />
+        <img
+          src={dummy}
+          alt="4"
+          className="image-Container col-start-1 col-span-3 row-start-3 h-40 w-full object-cover rounded-md shadow-lg"
+        />
       </div>
     </div>
   );
