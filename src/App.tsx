@@ -6,22 +6,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import LandingPage from "./components/layouts/landingPage";
+import PageTwo from "./components/layouts/pageTwo";
 // import BirthdayGrid from "./components/BirthdayGrid";
 
 gsap.registerPlugin(ScrollTrigger);
 const App = () => {
-  const [complete, setComplete] = useState(false);
-
-  const onCarComplete = () => {
-    setComplete(true);
-    gsap.to("#car", {
-      x: "100vh",
-      ease: "steps(20)",
-      duration: 3,
-      delay: 1,
-    });
-  };
-
   useGSAP(() => {
     gsap.fromTo(
       "#car",
@@ -45,27 +34,17 @@ const App = () => {
   return (
     <div className="min-h-screen w-screen">
         <LandingPage />
+        <PageTwo />
       {/* <BirthdayGrid /> */}
-      <div className="h-screen bg-blue-600"></div>
-      <div className="h-screen car-container w-screen bg-white text-black flex flex-col justify-between items-center p-5 relative">
-        {/* Konten Tengah (mobil) */}
+      <div className="h-screen bg4 relative car-container bg-[##cadbd8] w-screen text-black flex flex-col justify-between items-center p-5">
         <div className="flex items-center justify-end w-full h-full">
           <img
             src={car}
             alt="car"
             id="car"
             className="object-cover h-40 w-fit relative z-10"
-            onClick={onCarComplete}
           />
-          {complete && (
-            <div className="absolute bg-red-500 opacity-100 duration-100 transition-all top-50 w-40 h-10">
-              <p>Hello</p>
-            </div>
-          )}
         </div>
-
-        {/* Shape Merah di Bawah */}
-        <div className="w-full h-50 bg-red-500 absolute bottom-20 px-5 left-0 z-0" />
       </div>
 
       <HorizontalScrollSection />
