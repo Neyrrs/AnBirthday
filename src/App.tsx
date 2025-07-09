@@ -5,6 +5,7 @@ import car from "./assets/pictures/car.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import LandingPage from "./components/layouts/landingPage";
 // import BirthdayGrid from "./components/BirthdayGrid";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -43,8 +44,7 @@ const App = () => {
   }, []);
   return (
     <div className="min-h-screen w-screen">
-      <div className="h-screen"></div>
-
+        <LandingPage />
       {/* <BirthdayGrid /> */}
       <div className="h-screen bg-blue-600"></div>
       <div className="h-screen car-container w-screen bg-white text-black flex flex-col justify-between items-center p-5 relative">
