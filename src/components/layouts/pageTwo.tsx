@@ -22,6 +22,9 @@ import redguitar from "../../assets/pictures/redguitar.png";
 import teddie from "../../assets/pictures/teddie.png";
 import yellowAlert from "../../assets/pictures/yellowAlert.png";
 
+// TODO buat page yang horizontal
+// TODO kelarin page yang mobil dan mau dimmanain
+// TODO animate all of them
 const PageTwo = () => {
   return (
     <div className="relative min-h-screen w-screen bg1 px-4 py-15 flex flex-col gap-5">
@@ -73,6 +76,7 @@ const PageTwo = () => {
       </div>
 
       <div className="pointer-events-none absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/70 to-transparent z-10" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent z-10" />
     </div>
   );
 };

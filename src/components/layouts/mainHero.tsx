@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const MainHero = () => {
-
   useGSAP(() => {
     const split = new SplitText(".title", { type: "chars" });
 
@@ -50,7 +49,6 @@ const MainHero = () => {
         },
       }
     );
-    
   }, []);
 
   return (
@@ -87,6 +85,8 @@ const MainHero = () => {
           className="image-Container col-start-1 col-span-3 row-start-3 h-40 w-full object-cover rounded-md shadow-lg"
         />
       </div>
+      <div className="pointer-events-none absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/70 to-transparent z-10" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent z-10" />
     </div>
   );
 };

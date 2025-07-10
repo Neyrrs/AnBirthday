@@ -33,8 +33,8 @@ const App = () => {
   }, []);
   return (
     <div className="min-h-screen w-screen">
-        <LandingPage />
-        <PageTwo />
+      <LandingPage />
+      <PageTwo />
       {/* <BirthdayGrid /> */}
       <div className="h-screen bg4 relative car-container bg-[##cadbd8] w-screen text-black flex flex-col justify-between items-center p-5">
         <div className="flex items-center justify-end w-full h-full">
@@ -45,6 +45,8 @@ const App = () => {
             className="object-cover h-40 w-fit relative z-10"
           />
         </div>
+        <div className="pointer-events-none absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/70 to-transparent z-10" />
+        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent z-10" />
       </div>
 
       <HorizontalScrollSection />
