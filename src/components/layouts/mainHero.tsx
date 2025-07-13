@@ -1,4 +1,3 @@
-import React from "react";
 import dummy from "../../assets/pictures/dumm.jpg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

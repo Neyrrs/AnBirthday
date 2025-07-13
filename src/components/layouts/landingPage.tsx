@@ -1,16 +1,9 @@
-import React from "react";
 import dummyImgae from "../../assets/pictures/dumm.jpg";
 import dove from "../../assets/pictures/dove.png";
 import dove2 from "../../assets/pictures/dove2.png";
-import rose from "../../assets/pictures/rose.png";
 import bunchFlower from "../../assets/pictures/bunchFlower.png";
 import bunchRoses from "../../assets/pictures/bunchRoses.png";
-import flower2 from "../../assets/pictures/flower2.png";
-import flower3 from "../../assets/pictures/flower3.png";
-import stars from "../../assets/pictures/stars.png";
-import flowerWithButterfly from "../../assets/pictures/flowerWithButterfly.png";
 import cat from "../../assets/pictures/cat.png";
-
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

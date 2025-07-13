@@ -1,4 +1,3 @@
-import React from "react";
 import flower from "../../assets/pictures/flower.png";
 import flower2 from "../../assets/pictures/flower2.png";
 import flower3 from "../../assets/pictures/flower3.png";
@@ -123,6 +122,14 @@ const EndingPage = () => {
           >
             <img
               src={letter}
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/downloads/message.txt";
+                link.download = "Mylove.txt";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
               className="object-cover object-center w-35 h-35 rotate-20"
             />
           </div>
