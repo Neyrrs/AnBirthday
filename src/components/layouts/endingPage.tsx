@@ -117,7 +117,7 @@ const EndingPage = () => {
             <p className="text text-gray-400">Here, I got a message for you</p>
           </div>
           <div
-            className="w-full h-full right-0 mt-10 justify-center flex items-start"
+            className="w-full h-full right-0 mb-20 justify-center flex items-start"
             id="letter"
           >
             <img
@@ -130,7 +130,7 @@ const EndingPage = () => {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="object-cover object-center w-35 h-35 rotate-20"
+              className="object-cover object-center w-70 h-70"
             />
           </div>
         </div>
