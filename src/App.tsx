@@ -5,7 +5,7 @@
 
   const App = () => {
     return (
-      <div className="min-h-screen w-screen">
+      <div className="overflow-x-hidden">
         <LandingPage />
         <PageTwo />
 

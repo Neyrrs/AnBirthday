@@ -1,4 +1,4 @@
-import dummyImgae from "../../assets/pictures/dumm.jpg";
+import dummyImage from "../../assets/pictures/dumm.jpg";
 import dove from "../../assets/pictures/dove.png";
 import dove2 from "../../assets/pictures/dove2.png";
 import bunchFlower from "../../assets/pictures/bunchFlower.png";
@@ -22,6 +22,7 @@ const LandingPage = () => {
       stagger: 0.2,
       scale: 1.1,
     });
+
     gsap.to(".animateLeft", {
       rotate: -5,
       duration: 1,
@@ -33,73 +34,56 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <>
-      <div className="relative bg3 h-screen text-black w-screen p-3 flex flex-col gap-15">
-        <h1 className="text-lg font-bold">
-          Hey, look who{"'"}s turning 18 here?
-        </h1>
-        <div className="flex justify-between w-full h-fit items-center">
-          <p className="w-2/3 text-lg font-semibold">
-            Happy birthday for this cute girl that has sweet smile{" "}
-          </p>
-          <img
-            src={dummyImgae}
-            className="w-30 h-30 object-cover object-center rounded-full"
-            alt=""
-          />
-        </div>
-        <div className="top-9 right-8 absolute">
-          <img
-            src={dove}
-            className="w-20 h-20 object-cover animateRight object-center"
-            alt="dove"
-          />
-        </div>
-        <div className="absolute bottom-5 -left-10 rotate-12">
-          <img
-            src={bunchFlower}
-            className="w-40 h-40 object-cover animateLeft object-center"
-            alt=""
-          />
-        </div>
-      </div>
-      <div className="absolute bottom-3 -right-5">
+    <div className="relative bg3 h-screen text-black w-screen p-3 flex flex-col gap-15 overflow-x-hidden max-w-screen">
+      <h1 className="text-lg font-bold">
+        Hey, look who{"'"}s turning 18 here?
+      </h1>
+
+      <div className="flex justify-between w-full h-fit items-center">
+        <p className="w-2/3 text-lg font-semibold">
+          Happy birthday for this cute girl that has sweet smile
+        </p>
         <img
-          src={bunchRoses}
-          className="w-42 h-42 object-cover animateLeft object-center transform"
-          alt=""
+          src={dummyImage}
+          className="w-24 h-24 object-cover object-center rounded-full"
+          alt="Profile"
         />
       </div>
-      <div className=" absolute bottom-3 left-1/2">
-        <img
-          src={cat}
-          className="w-40 h-40 object-cover animateRight object-center transform"
-          alt=""
-        />
-      </div>
-      <div className="absolute bottom-3 right-1/2">
-        <img
-          src={bunchRoses}
-          className="w-40 h-40 object-cover animateLeft object-center transform"
-          alt=""
-        />
-      </div>
-      <div className="absolute top-1/3 right-7 ">
-        <img
-          src={dove2}
-          className="w-30 h-30 object-cover animateRight object-center transform"
-          alt=""
-        />
-      </div>
-      <div className="absolute top-1/3 left-10">
-        <img
-          src={dove2}
-          className="w-25 h-25 object-cover animateLeft object-center transform"
-          alt=""
-        />
-      </div>
+
+      {/* Decorations */}
+      <img
+        src={dove}
+        className="w-20 h-20 object-cover animateRight absolute top-9 right-4 max-w-[100vw]"
+        alt="dove"
+      />
+      <img
+        src={bunchFlower}
+        className="w-40 h-40 object-cover animateLeft absolute bottom-5 left-4 max-w-[100vw]"
+        alt="bunchFlower"
+      />
+      <img
+        src={bunchRoses}
+        className="w-40 h-40 object-cover animateLeft absolute bottom-3 right-3 max-w-[100vw]"
+        alt="roses"
+      />
+      <img
+        src={cat}
+        className="w-32 h-32 object-cover animateRight absolute bottom-3 left-1/2 -translate-x-1/2"
+        alt="cat"
+      />
+      <img
+        src={dove2}
+        className="w-28 h-28 object-cover animateLeft absolute top-1/3 left-3 max-w-[100vw]"
+        alt="dove2"
+      />
+      <img
+        src={dove2}
+        className="w-28 h-28 object-cover animateRight absolute top-1/3 right-3 max-w-[100vw]"
+        alt="dove2"
+      />
+
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/70 to-transparent z-10" />
-    </>
+    </div>
   );
 };
 
