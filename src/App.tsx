@@ -1,19 +1,19 @@
-  import HorizontalScrollSection from "./components/layouts/horizontalScroll";
-  import LastPage from "./components/layouts/lastPage";
-  import LandingPage from "./components/layouts/landingPage";
-  import PageTwo from "./components/layouts/pageTwo";
+import HorizontalScrollSection from "./components/layouts/horizontalScroll";
+import LastPage from "./components/layouts/lastPage";
+import LandingPage from "./components/layouts/landingPage";
+import PageTwo from "./components/layouts/pageTwo";
 
-  const App = () => {
-    return (
-      <div className="overflow-x-hidden">
-        <LandingPage />
-        <PageTwo />
+const App = () => {
+  return (
+    <div className="overflow-x-hidden">
+      <LandingPage />
+      <PageTwo />
 
-        <HorizontalScrollSection  />
+      <HorizontalScrollSection />
 
-        <LastPage />
-      </div>
-    );
-  };
+      <LastPage />
+    </div>
+  );
+};
 
-  export default App;
+export default App;

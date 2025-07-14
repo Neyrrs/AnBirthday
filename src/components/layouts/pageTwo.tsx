@@ -25,7 +25,6 @@ const PageTwo = () => {
         ))}
       </div>
 
-      {/* Decorations */}
       <img
         src={teddie}
         alt="teddie"
