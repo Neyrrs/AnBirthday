@@ -35,7 +35,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="relative bg3 h-screen text-black w-screen p-3 flex flex-col gap-15 overflow-x-hidden max-w-screen">
+    <div className="relative bg3 h-screen text-black w-screen p-3 flex flex-col gap-15 overflow-hidden max-w-screen">
       <h1 className="text-lg font-bold">
         Hey, look who{"'"}s turning 18 here?
       </h1>
