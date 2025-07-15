@@ -1,4 +1,3 @@
-import dummyImage from "../../assets/pictures/dumm.jpg";
 import dove from "../../assets/pictures/dove.png";
 import dove2 from "../../assets/pictures/dove2.png";
 import bunchFlower from "../../assets/pictures/bunchFlower.png";
@@ -6,6 +5,8 @@ import bunchRoses from "../../assets/pictures/bunchRoses.png";
 import cat from "../../assets/pictures/cat.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import manisBanget from "../../assets/Ana/manisbanget.jpg";
+import long from "../../assets/Ana/long.png";
 
 const LandingPage = () => {
   useGSAP(() => {
@@ -44,12 +45,17 @@ const LandingPage = () => {
           Happy birthday for this cute girl that has sweet smile
         </p>
         <img
-          src={dummyImage}
+          src={manisBanget}
           className="w-24 h-24 object-cover object-center rounded-full"
           alt="Profile"
         />
       </div>
 
+      <img
+        src={long}
+        className="w-auto h-[70vh] z-1 object-cover object-center animateFloat absolute left-1/2 top-1/3 -translate-x-1/2"
+        alt="floating object"
+      />
       {/* Decorations */}
       <img
         src={dove}
@@ -58,27 +64,27 @@ const LandingPage = () => {
       />
       <img
         src={bunchFlower}
-        className="w-40 h-40 object-cover animateLeft absolute bottom-5 left-4 max-w-[100vw]"
+        className="w-40 h-40 z-20 object-cover animateLeft absolute bottom-5 left-4 max-w-[100vw]"
         alt="bunchFlower"
       />
       <img
         src={bunchRoses}
-        className="w-40 h-40 object-cover animateLeft absolute bottom-3 right-3 max-w-[100vw]"
+        className="w-40 h-40 z-20 object-cover animateLeft absolute bottom-3 right-3 max-w-[100vw]"
         alt="roses"
       />
       <img
         src={cat}
-        className="w-32 h-32 object-cover animateRight absolute bottom-3 left-1/2 -translate-x-1/2"
+        className="w-32 h-32 z-20 object-cover animateRight absolute bottom-3 left-1/2 -translate-x-1/2"
         alt="cat"
       />
       <img
         src={dove2}
-        className="w-28 h-28 object-cover animateLeft absolute top-1/3 left-3 max-w-[100vw]"
+        className="w-28 h-28 z-20 object-cover animateLeft absolute top-1/3 left-3 max-w-[100vw]"
         alt="dove2"
       />
       <img
         src={dove2}
-        className="w-28 h-28 object-cover animateRight absolute top-1/3 right-3 max-w-[100vw]"
+        className="w-28 h-28 z-20 object-cover animateRight absolute top-1/3 right-3 max-w-[100vw]"
         alt="dove2"
       />
 

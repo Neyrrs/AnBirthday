@@ -5,22 +5,39 @@ import crown from "../../assets/pictures/crown.png";
 import teddie from "../../assets/pictures/teddie.png";
 import yellowAlert from "../../assets/pictures/yellowAlert.png";
 
+import tester from "../../assets/Ana/tester.jpg";
+import Beauty from "../../assets/Ana/Beauty.jpg";
+
+import mostCute from "../../assets/Ana/mostCute.jpg";
+import redAna from "../../assets/Ana/redAna.jpg";
+import cakep from "../../assets/Ana/cakep.jpg";
+
 const PageTwo = () => {
   return (
     <div className="relative min-h-screen w-screen bg1 px-4 py-15 flex flex-col gap-5 overflow-hidden max-w-screen">
       <h1 className="text-2xl font-bold text-white">Best of the best!</h1>
 
       <div className="grid grid-cols-2 gap-2">
-        {[...Array(5)].map((_, i) => (
+        {[
+          { image: tester },
+          { image: Beauty },
+          { image: cakep },
+          { image: mostCute },
+          { image: redAna },
+        ].map((item, i) => (
           <div
             key={i}
-            className={`relative border-white border-2 backdrop-blur-lg rounded-lg h-32 p-2 ${
+            className={`relative rounded-lg h-32 ${
               i === 2 ? "col-span-2" : ""
             }`}
           >
-            <button className="absolute top-1 right-2 text-white text-sm font-bold">
-              Hello
-            </button>
+            <img
+              src={item.image}
+              className={`w-full h-full  object-cover ${
+                i == 2 ? "object-top" : "object-center"
+              } rounded-lg `}
+              alt=""
+            />
           </div>
         ))}
       </div>

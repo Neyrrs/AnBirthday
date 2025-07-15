@@ -1,8 +1,13 @@
-import dummy from "../../assets/pictures/dumm.jpg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import bestCute from "../../assets/Ana/bestCute.jpg";
+import cantikSuper from "../../assets/Ana/cantikSuper.jpg";
+import freakyButCute from "../../assets/Ana/freakyButCute.jpg";
+import sweet from "../../assets/Ana/sweet.jpg";
+
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const MainHero = () => {
@@ -64,24 +69,24 @@ const MainHero = () => {
 
       <div className="grid grid-cols-2 grid-rows-3 gap-2 w-fit">
         <img
-          src={dummy}
+          src={bestCute}
           alt="1"
           className="image-Container col-start-1 row-start-1 w-full h-full object-cover rounded-md shadow-lg"
         />
         <img
-          src={dummy}
+          src={cantikSuper}
           alt="2"
           className="image-Container col-start-1 row-start-2  h-full w-full object-cover rounded-md shadow-lg"
         />
         <img
-          src={dummy}
+          src={sweet}
           alt="3"
           className="image-Container col-start-2 row-start-1 row-span-2 w-full h-full object-cover rounded-md shadow-lg"
         />
         <img
-          src={dummy}
+          src={freakyButCute}
           alt="4"
-          className="image-Container col-start-1 col-span-3 row-start-3 h-40 w-full object-cover rounded-md shadow-lg"
+          className="image-Container col-start-1 col-span-3 row-start-3 h-40 w-full object-cover object-top rounded-md shadow-lg"
         />
       </div>
       <div className="pointer-events-none absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/70 to-transparent z-10" />

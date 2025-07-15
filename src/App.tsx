@@ -5,7 +5,7 @@ import PageTwo from "./components/layouts/pageTwo";
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden md:hidden block">
       <LandingPage />
       <PageTwo />
 
