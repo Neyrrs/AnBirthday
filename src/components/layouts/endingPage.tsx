@@ -125,7 +125,7 @@ const EndingPage = () => {
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = "/downloads/message.txt";
-                link.download = "Mylove.txt";
+                link.download = "Message from someone you love.txt";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);

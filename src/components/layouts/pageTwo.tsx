@@ -34,7 +34,7 @@ const PageTwo = () => {
             <img
               src={item.image}
               className={`w-full h-full  object-cover ${
-                i == 2 ? "object-top" : "object-center"
+                i == 2 || i == 1 ? "object-top" : "object-center"
               } rounded-lg `}
               alt=""
             />
