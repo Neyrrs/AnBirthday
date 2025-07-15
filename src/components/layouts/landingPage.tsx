@@ -53,7 +53,7 @@ const LandingPage = () => {
 
       <img
         src={long}
-        className="w-auto h-[70vh] z-1 object-cover object-center animateFloat absolute left-1/2 top-1/3 -translate-x-1/2"
+        className="w-auto h-[70vh] z-1 object-cover object-center overflow-y-hidden absolute left-1/2 top-1/3 -translate-x-1/2"
         alt="floating object"
       />
       {/* Decorations */}
