@@ -60,7 +60,7 @@ const PageTwo = () => {
       <img
         src={crown}
         alt="crown"
-        className="absolute top-[40%] left-2 w-32 h-40 object-contain max-w-[100vw]"
+        className="absolute top-[30%] left-2 w-32 h-40 object-contain max-w-[100vw]"
       />
       <img
         src={yellowAlert}
